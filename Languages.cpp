@@ -63,5 +63,16 @@ void Languages::CPlusPlus(std::string line) {
 
 	stringtools::replaceAll(line, "using",  STR(WBOLD_GREEN_COLOR) + "using" + STR(WBLACK_COLOR));	
 	
+	stringtools::replaceAll(line, "std",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "std" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "iostream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "iostream" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "cstring",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "cstring" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "ctype",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "ctype" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "cout",  STR(WBOLD_CYAN_COLOR) + "cout" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "printf",  STR(WBOLD_CYAN_COLOR) + "printf" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "getline",  STR(WBOLD_CYAN_COLOR) + "getline" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "cin",  STR(WBOLD_CYAN_COLOR) + "cin" + STR(WBLACK_COLOR));
+	
 	std::cout << line + "\n";
 }
