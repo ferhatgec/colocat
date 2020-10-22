@@ -30,10 +30,15 @@ void ReadFile(std::string file) {
 	Languages lang;
 	
     if(readfile.is_open()) {
-        while (std::getline(readfile, line)) {
-			lang.Regular(line);
-        }
-        	
+    	if(strstr(file.c_str(), ".cpp") || strstr(file.c_str(), ".hpp")) {
+    		while (std::getline(readfile, line)) {
+				lang.CPlusPlus(line);
+        	}
+    	} else { 
+        	while (std::getline(readfile, line)) {
+				lang.Regular(line);
+        	}
+        } 
         readfile.close();
     } else std::cout << "Unable to open file\n";
     

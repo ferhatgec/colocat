@@ -14,6 +14,7 @@
 class Languages {
 public:
 	void Regular(std::string line);
+	void CPlusPlus(std::string line);
 };
 
 #endif // LANGUAGES_HPP
