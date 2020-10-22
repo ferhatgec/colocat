@@ -30,6 +30,8 @@ void Languages::Regular(std::string line) {
 
 void Languages::CPlusPlus(std::string line) {
 	stringtools::replaceAll(line, "int", STR(WBOLD_BLUE_COLOR) + "int" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "long",  STR(WBOLD_BLUE_COLOR) + "long" + STR(WBLACK_COLOR));
+	
 	stringtools::replaceAll(line, "bool", STR(WBOLD_BLUE_COLOR) + "int" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "char",  STR(WBOLD_BLUE_COLOR) + "char" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "auto",  STR(WBOLD_BLUE_COLOR) + "auto" + STR(WBLACK_COLOR));
@@ -42,6 +44,9 @@ void Languages::CPlusPlus(std::string line) {
 	stringtools::replaceAll(line, "extern",  STR(WBOLD_LIGHT_BLUE_COLOR) + "extern" + STR(WBLACK_COLOR));			
 	stringtools::replaceAll(line, "inline",  STR(WBOLD_LIGHT_BLUE_COLOR) + "inline" + STR(WBLACK_COLOR));
 	
+	stringtools::replaceAll(line, "public",  STR(WBOLD_LIGHT_BLUE_COLOR) + "public" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "private",  STR(WBOLD_LIGHT_BLUE_COLOR) + "private" + STR(WBLACK_COLOR));	
+	stringtools::replaceAll(line, "protected",  STR(WBOLD_LIGHT_BLUE_COLOR) + "protected" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "#include",  STR(WBOLD_YELLOW_COLOR) + "#include" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "#define",  STR(WBOLD_MAGENTA_COLOR) + "#define" + STR(WBLACK_COLOR));
@@ -53,6 +58,10 @@ void Languages::CPlusPlus(std::string line) {
 	
 	stringtools::replaceAll(line, "nodiscard",  STR(WBOLD_LIGHT_BLACK_COLOR) + "nodiscard" + STR(WBLACK_COLOR));
 	
+	stringtools::replaceAll(line, "class",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "class" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "namespace",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "namespace" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "using",  STR(WBOLD_GREEN_COLOR) + "using" + STR(WBLACK_COLOR));	
 	
-	std::cout << WBOLD_CYAN_COLOR << line + "\n";
+	std::cout << line + "\n";
 }
