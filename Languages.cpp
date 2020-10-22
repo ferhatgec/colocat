@@ -67,6 +67,14 @@ void Languages::CPlusPlus(std::string line) {
 	
 	stringtools::replaceAll(line, "iostream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "iostream" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "cstring",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "cstring" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "sstream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "sstream" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "fstream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "fstream" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "memory",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "memory" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "cstdlib",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "cstdlib" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "cstdio",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "cstdio" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "vector",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "vector" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "algorithm",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "algorithm" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "thread",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "thread" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "ctype",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "ctype" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "cout",  STR(WBOLD_CYAN_COLOR) + "cout" + STR(WBLACK_COLOR));
