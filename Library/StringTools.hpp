@@ -1,5 +1,5 @@
 /*# MIT License
-#
+# Forked from https://github.com/ferhatgec/stringtools
 # Copyright (c) 2020 Ferhat Geçdoğan All Rights Reserved.
 # Distributed under the terms of the MIT License.
 #*/
