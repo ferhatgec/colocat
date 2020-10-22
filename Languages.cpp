@@ -75,7 +75,18 @@ void Languages::CPlusPlus(std::string line) {
 	stringtools::replaceAll(line, "vector",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "vector" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "algorithm",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "algorithm" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "thread",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "thread" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "ctype",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "ctype" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "array",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "array" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "bitset",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "bitset" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "deque",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "deque" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "map",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "map" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "stack",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "stack" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "set",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "set" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "iterator",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "iterator" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "tuple",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "tuple" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "locale",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "locale" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "regex",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "regex" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "istream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "istream" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "ostream",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "ostream" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "cout",  STR(WBOLD_CYAN_COLOR) + "cout" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "printf",  STR(WBOLD_CYAN_COLOR) + "printf" + STR(WBLACK_COLOR));
