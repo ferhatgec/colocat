@@ -1,3 +1,3 @@
 #!/bin/sh
 
-g++ ColoCat.cpp -o colocat && ./colocat
+g++ -std=c++17 -I./include/ ColoCat.cpp -o colocat && ./colocat

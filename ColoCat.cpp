@@ -6,9 +6,10 @@
 
 #include <iostream>
 #include <cstring>
-#include "FileSystemPlusPlus.h"
-#include "Colorized.hpp"
-#include "StringTools.hpp"
+
+#include <FileSystemPlusPlus.h>
+#include <Colorized.hpp>
+#include <StringTools.hpp>
 
 inline std::string STR(const char* str) {
 	return (std::string)str;
