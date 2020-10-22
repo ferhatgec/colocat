@@ -53,5 +53,6 @@ void Languages::CPlusPlus(std::string line) {
 	
 	stringtools::replaceAll(line, "nodiscard",  STR(WBOLD_LIGHT_BLACK_COLOR) + "nodiscard" + STR(WBLACK_COLOR));
 	
-	std::cout << line + "\n";
+	
+	std::cout << WBOLD_CYAN_COLOR << line + "\n";
 }
