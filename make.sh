@@ -1,3 +1,3 @@
 #!/bin/sh
 
-g++ -std=c++17 -I./Library/ -I./include/ Languages.cpp ColoCat.cpp -o colocat && ./colocat
+g++ -std=c++17 -I./Library/ -I./include/ src/Languages.cpp src/ColoCat.cpp -o colocat && ./colocat
