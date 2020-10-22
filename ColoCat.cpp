@@ -7,13 +7,11 @@
 #include <iostream>
 #include <cstring>
 
+#include <Languages.hpp>
+
 #include <FileSystemPlusPlus.h>
 #include <Colorized.hpp>
 #include <StringTools.hpp>
-
-inline std::string STR(const char* str) {
-	return (std::string)str;
-}
 
 int GetWhitespace(std::string line) {
     int q = 0;
@@ -28,21 +26,16 @@ int GetWhitespace(std::string line) {
 void ReadFile(std::string file) {
     std::string line;
     std::ifstream readfile((fsplusplus::GetCurrentWorkingDir() + "/" + file).c_str());
+
+	Languages lang;
+	
     if(readfile.is_open()) {
         while (std::getline(readfile, line)) {
-			stringtools::replaceAll(line, "int", STR(WBOLD_RED_COLOR) + "int" + STR(WBLACK_COLOR));
-			stringtools::replaceAll(line, "char",  STR(WBOLD_BLUE_COLOR) + "char" + STR(WBLACK_COLOR));
-			stringtools::replaceAll(line, "const",  STR(WBOLD_LIGHT_BLUE_COLOR) + "const" + STR(WBLACK_COLOR));
-			
-			stringtools::replaceAll(line, "void",  STR(WBOLD_BLUE_COLOR) + "void" + STR(WBLACK_COLOR));
-			
-			std::cout << line;
-			
-			printf("\n");
+			lang.Regular(line);
         }
         	
         readfile.close();
-    } else printf("Unable to open file\n");
+    } else std::cout << "Unable to open file\n";
     
 }
 

@@ -178,13 +178,13 @@ typedef struct TCOLOR {
   	int color;
 } TCOLOR;
 
-COLOR fromRGB(unsigned short r, unsigned short g, unsigned short b) {
+static COLOR fromRGB(unsigned short r, unsigned short g, unsigned short b) {
 	return COLOR{r, g, b};
 }
 
-TCOLOR fromT(TYPE type, int color) { return TCOLOR{type, color}; }
+static TCOLOR fromT(TYPE type, int color) { return TCOLOR{type, color}; }
 
-std::string toANSICode(COLOR color) {
+static std::string toANSICode(COLOR color) {
   	std::stringstream str;
   	str << "\033[38;2;";
   	str << color.R;
@@ -197,7 +197,7 @@ std::string toANSICode(COLOR color) {
 	return val;
 }
 
-std::string toANSIFCode(COLOR color) {
+static std::string toANSIFCode(COLOR color) {
   	std::stringstream str;
   	str << "\033[48;2;";
   	str << color.R;
@@ -210,51 +210,81 @@ std::string toANSIFCode(COLOR color) {
 	return val;
 }
 
-std::string toANSICode(TYPE type, int color) {
+static std::string toANSICode(TYPE type, int color) {
   	return Templatestr + std::to_string(type) + Semicolonstr +
          std::to_string(color) + Markstr;
 }
 
-std::string toANSICode(TCOLOR color) {
+static std::string toANSICode(TCOLOR color) {
   	return toANSICode(color.type, color.color);
 }
 
-void textBackground(int color) { printf("%c[%dm", ESC, 40 + color); }
+static void textBackground(int color) { printf("%c[%dm", ESC, 40 + color); }
 
-void setColor(COLOR color) { std::cout << toANSICode(color); }
+static void setColor(COLOR color) { std::cout << toANSICode(color); }
 
-void setFColor(COLOR color) { std::cout << toANSIFCode(color); }
+static void setFColor(COLOR color) { std::cout << toANSIFCode(color); }
 
-void setColor(TYPE type, int color) { std::cout << toANSICode(type, color); }
+static void setColor(TYPE type, int color) { std::cout << toANSICode(type, color); }
 
-void setColor(TCOLOR color) { setColor(color.type, color.color); }
+static void setColor(TCOLOR color) { setColor(color.type, color.color); }
 
-void printfc(const TYPE type, int color, bool reset, char* msg) {
+static void printfc(const TYPE type, int color, bool reset, char* msg) {
   	setColor(type, color);
   	printf(msg);
 
   	if (reset) RESETB();
 }
 
-void printfc(const TCOLOR color, bool reset, char* msg) {
+static void printfc(const TCOLOR color, bool reset, char* msg) {
  	printfc(color.type, color.color, reset, msg);
 }
 
-void printfc(const COLOR color, bool reset, char* msg) {
+static void printfc(const COLOR color, bool reset, char* msg) {
   	setColor(color);
   	printf(msg);
   	
 	if (reset) RESETB();
 }
 
-void printfc(const TYPE type, int color, char* msg) {
+static void printfc(const TYPE type, int color, char* msg) {
   	printfc(type, color, 1, msg);
 }
 
-void printfc(const TCOLOR color, char* msg) {
+static void printfc(const TCOLOR color, char* msg) {
   	printfc(color.type, color.color, msg);
 }
 
-void printfc(const COLOR color, char* msg) { printfc(color, 1, msg); }
+static void printfc(const COLOR color, char* msg) { printfc(color, 1, msg); }
 
+
+namespace colorized {
+    static void TextBackground(int color) {
+	printf("%c[%dm", ESC, 40+color);
+    }
+        
+    static std::string IntToString(int a) {
+    	std::ostringstream temp;
+    	temp << a;
+    	return temp.str();
+    }
+    
+    static void PrintWith(const char* color, const char* text) {
+   	std::cout << color << text << WBLACK_COLOR;
+    }
+
+    static void PrintWhReset(const char* color, const char* text) {
+    	std::cout << color << text;
+    }
+
+    static std::string Colorize(int type, int color) {
+    	return Templatestr + IntToString(type) + Semicolonstr + IntToString(color) + Markstr;
+    }
+    
+    static const char* ColorizeChar(int type, int color) {
+    	std::string conv(Templatestr + IntToString(type) + Semicolonstr + IntToString(color) + Markstr);
+    	std::cout << conv;
+    	return conv.c_str();
+    }
+}
 #endif  // COLORIZED_HPP
