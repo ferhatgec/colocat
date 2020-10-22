@@ -63,7 +63,27 @@ void ReadFile(std::string file) {
     
 }
 
+void HelpFunction(const char* arg) {
+	BOLD_RED_COLOR();
+	std::cout << "Fegeya ";
+	
+	BOLD_GREEN_COLOR();
+	std::cout << "Colocat\n";
+	
+	BOLD_BLUE_COLOR();		
+	std::cout << "Colorized 'cat' implementation.\n";
+	
+	BOLD_LIGHT_MAGENTA_COLOR();
+	std::cout << arg << " [file]\n";  
+}
+
 int main(int argc, char** argv) { 
+	if(argc < 2) {
+    	HelpFunction(argv[0]);
+		
+		return 0;
+	}
+    
     std::string argv_str(argv[1]);
     
     ReadFile(argv_str);
