@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstring>
 
+#include <ColoCat.hpp>
 #include <Languages.hpp>
 
 #include <FileSystemPlusPlus.h>
@@ -49,10 +50,13 @@ void HelpFunction(const char* arg) {
 	std::cout << "Fegeya ";
 	
 	BOLD_GREEN_COLOR();
-	std::cout << "Colocat\n";
+	std::cout << "Colocat ";
 	
-	BOLD_BLUE_COLOR();		
-	std::cout << "Colorized 'cat' implementation.\n";
+	BOLD_BLUE_COLOR();
+	std::cout << VERSION;
+	
+	BOLD_YELLOW_COLOR();		
+	std::cout << "\nColorized 'cat' implementation.\n";
 	
 	BOLD_LIGHT_MAGENTA_COLOR();
 	std::cout << arg << " [file]\n";  
