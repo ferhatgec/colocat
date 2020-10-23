@@ -177,3 +177,36 @@ void Languages::FlaScript(std::string line) {
 	
 	std::cout << line + "\n";
 }
+
+void Languages::Python(std::string line) {
+	stringtools::replaceAll(line, "if",  STR(WBOLD_LIGHT_RED_COLOR) + "if" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "else",  STR(WBOLD_LIGHT_RED_COLOR) + "else" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "elif",  STR(WBOLD_LIGHT_RED_COLOR) + "elif" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "for",  STR(WBOLD_MAGENTA_COLOR) + "for" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "while",  STR(WBOLD_MAGENTA_COLOR) + "while" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "def",  STR(WBOLD_RED_COLOR) + "def" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "lambda",  STR(WBOLD_RED_COLOR) + "lambda" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "import",  STR(WBOLD_YELLOW_COLOR) + "import" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "from",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "from" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "global",  STR(WBOLD_LIGHT_BLUE_COLOR) + "global" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "return",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "return" + STR(WBLACK_COLOR));
+		
+	stringtools::replaceAll(line, "print",  STR(WBOLD_CYAN_COLOR) + "print" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+	
+	std::cout << line + "\n";
+}

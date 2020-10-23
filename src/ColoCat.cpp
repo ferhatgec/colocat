@@ -36,6 +36,9 @@ void ReadFile(std::string file) {
     	else if(strstr(file.c_str(), ".fls") || strstr(file.c_str(), ".flsh"))
     		while (std::getline(readfile, line))
 				lang.FlaScript(line);
+    	else if(strstr(file.c_str(), ".py") || strstr(file.c_str(), ".pyw"))
+    		while (std::getline(readfile, line))
+				lang.Python(line);
     	else
         	while (std::getline(readfile, line))
 				lang.Regular(line);

@@ -16,6 +16,7 @@ public:
 	void Regular(std::string line);
 	void CPlusPlus(std::string line);
 	void FlaScript(std::string line);
+	void Python(std::string line);
 };
 
 #endif // LANGUAGES_HPP
