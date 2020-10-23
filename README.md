@@ -3,7 +3,7 @@
 
 ### Language support:
   * [x] C++
-  * [ ] FlaScript
+  * [x] FlaScript
   * [ ] Golang
   * [ ] Python
   * [ ] Vala
