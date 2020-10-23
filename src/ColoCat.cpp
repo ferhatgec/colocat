@@ -17,9 +17,8 @@
 int GetWhitespace(std::string line) {
     int q = 0;
     
-    while(line[q] == ' ') {
+    while(line[q] == ' ')
         q++;
-    }
     
     return q;
 }
@@ -31,15 +30,16 @@ void ReadFile(std::string file) {
 	Languages lang;
 	
     if(readfile.is_open()) {
-    	if(strstr(file.c_str(), ".cpp") || strstr(file.c_str(), ".hpp")) {
-    		while (std::getline(readfile, line)) {
+    	if(strstr(file.c_str(), ".cpp") || strstr(file.c_str(), ".hpp"))
+    		while (std::getline(readfile, line))
 				lang.CPlusPlus(line);
-        	}
-    	} else { 
-        	while (std::getline(readfile, line)) {
+    	else if(strstr(file.c_str(), ".fls") || strstr(file.c_str(), ".flsh"))
+    		while (std::getline(readfile, line))
+				lang.FlaScript(line);
+    	else
+        	while (std::getline(readfile, line))
 				lang.Regular(line);
-        	}
-        } 
+        	 
         readfile.close();
     } else std::cout << "Unable to open file\n";
     
@@ -64,12 +64,11 @@ void HelpFunction(const char* arg) {
 
 int main(int argc, char** argv) { 
 	if(argc < 2) {
-    	HelpFunction(argv[0]);
-		
+    	HelpFunction(argv[0]);	
 		return 0;
 	}
     
-    std::string argv_str(argv[1]);
+	std::string argv_str(argv[1]);
     
     ReadFile(argv_str);
 

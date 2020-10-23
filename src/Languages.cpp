@@ -42,7 +42,7 @@ void Languages::CPlusPlus(std::string line) {
 	
 	stringtools::replaceAll(line, "for",  STR(WBOLD_MAGENTA_COLOR) + "for" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "do",  STR(WBOLD_MAGENTA_COLOR) + "do" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "fowhile",  STR(WBOLD_MAGENTA_COLOR) + "while" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "while",  STR(WBOLD_MAGENTA_COLOR) + "while" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "void",  STR(WBOLD_RED_COLOR) + "void" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "main",  STR(WBOLD_LIGHT_RED_COLOR) + "main" + STR(WBLACK_COLOR));
@@ -108,6 +108,52 @@ void Languages::CPlusPlus(std::string line) {
 	stringtools::replaceAll(line, "printf",  STR(WBOLD_CYAN_COLOR) + "printf" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "getline",  STR(WBOLD_CYAN_COLOR) + "getline" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "cin",  STR(WBOLD_CYAN_COLOR) + "cin" + STR(WBLACK_COLOR));
+	
+	std::cout << line + "\n";
+}
+
+void Languages::FlaScript(std::string line) {
+	stringtools::replaceAll(line, "var", STR(WBOLD_BLUE_COLOR) + "var" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "bool", STR(WBOLD_LIGHT_BLUE_COLOR) + "bool" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "int",  STR(WBOLD_LIGHT_BLUE_COLOR) + "int" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "string",  STR(WBOLD_LIGHT_BLUE_COLOR) + "string" + STR(WBLACK_COLOR));
+
+
+	stringtools::replaceAll(line, "if",  STR(WBOLD_LIGHT_RED_COLOR) + "if" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "else",  STR(WBOLD_LIGHT_RED_COLOR) + "else" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "for",  STR(WBOLD_MAGENTA_COLOR) + "for" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "do",  STR(WBOLD_MAGENTA_COLOR) + "do" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "while",  STR(WBOLD_MAGENTA_COLOR) + "while" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "func",  STR(WBOLD_RED_COLOR) + "void" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "main",  STR(WBOLD_LIGHT_RED_COLOR) + "main" + STR(WBLACK_COLOR));
+	
+	
+	stringtools::replaceAll(line, "@append",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "@append" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "@pop_back",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "@pop_back" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "@between",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "@between" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "import",  STR(WBOLD_YELLOW_COLOR) + "import" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "defin",  STR(WBOLD_MAGENTA_COLOR) + "defin" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "put",  STR(WBOLD_MAGENTA_COLOR) + "put" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "#ifdef",  STR(WBOLD_MAGENTA_COLOR) + "#ifdef" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "#endif",  STR(WBOLD_MAGENTA_COLOR) + "#endif" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "return",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "return" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "SystemInfo",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "SystemInfo" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "Colorized",  STR(WBOLD_LIGHT_MAGENTA_COLOR) + "Colorized" + STR(WBLACK_COLOR));
+		
+	stringtools::replaceAll(line, "newline",  STR(WBOLD_LIGHT_BLACK_COLOR) + "newline" + STR(WBLACK_COLOR));
+		
+	stringtools::replaceAll(line, "print",  STR(WBOLD_CYAN_COLOR) + "print" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "fprintf",  STR(WBOLD_CYAN_COLOR) + "fprintf" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "@echo",  STR(WBOLD_CYAN_COLOR) + "@echo" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "fprintln",  STR(WBOLD_CYAN_COLOR) + "fprintln" + STR(WBLACK_COLOR));
 	
 	std::cout << line + "\n";
 }
