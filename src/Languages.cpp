@@ -185,6 +185,10 @@ void Languages::Python(std::string line) {
 	
 	stringtools::replaceAll(line, "for",  STR(WBOLD_MAGENTA_COLOR) + "for" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "while",  STR(WBOLD_MAGENTA_COLOR) + "while" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "str", STR(WBOLD_BLUE_COLOR) + "str" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "bool", STR(WBOLD_BLUE_COLOR) + "bool" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "float", STR(WBOLD_BLUE_COLOR) + "float" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "def",  STR(WBOLD_RED_COLOR) + "def" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "lambda",  STR(WBOLD_RED_COLOR) + "lambda" + STR(WBLACK_COLOR));
