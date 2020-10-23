@@ -4,8 +4,8 @@
 ### Language support:
   * [x] C++
   * [x] FlaScript
-  * [ ] Golang
   * [x] Python
+  * [ ] Golang
   * [ ] Vala
   * [ ] JavaScript
 
