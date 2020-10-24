@@ -5,6 +5,7 @@
   * [x] C++
   * [x] FlaScript
   * [x] Python
+  * [x] HTML
   * [ ] Golang
   * [ ] Vala
   * [ ] JavaScript
