@@ -39,6 +39,9 @@ void ReadFile(std::string file) {
     	else if(strstr(file.c_str(), ".py") || strstr(file.c_str(), ".pyw"))
     		while (std::getline(readfile, line))
 				lang.Python(line);
+		else if(strstr(file.c_str(), ".htm") || strstr(file.c_str(), ".html"))
+			while(std::getline(readfile, line))
+				lang.HTML(line);
     	else
         	while (std::getline(readfile, line))
 				lang.Regular(line);
