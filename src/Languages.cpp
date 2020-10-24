@@ -345,7 +345,7 @@ void Languages::HTML(std::string line) {
 
 	stringtools::replaceAll(line, "/", STR(WBOLD_YELLOW_COLOR) + "/" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "<", STR(WBOLD_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">", STR(WBOLD_CYAN_COLOR) + ">" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ">", STR(WBOLD_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 
 	std::cout << line + "\n";
 
