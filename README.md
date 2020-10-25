@@ -6,9 +6,9 @@
   * [x] FlaScript
   * [x] Python
   * [x] HTML
+  * [x] JavaScript
   * [ ] Golang
   * [ ] Vala
-  * [ ] JavaScript
 
 ![Colorized 'Meow!'!](resource/window.png)
 

@@ -345,8 +345,47 @@ void Languages::HTML(std::string line) {
 
 	stringtools::replaceAll(line, "/", STR(WBOLD_YELLOW_COLOR) + "/" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "<", STR(WBOLD_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">", STR(WBOLD_CYAN_COLOR) + ">" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ">", STR(WBOLD_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 
 	std::cout << line + "\n";
 
+}
+void Languages::Javascript(std::string line) {
+	stringtools::replaceAll(line, "var", STR(WBOLD_BLUE_COLOR) + "var" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "const", STR(WBOLD_BLUE_COLOR) + "const" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "let", STR(WBOLD_BLUE_COLOR) + "let" + STR(WBLACK_COLOR));
+	
+	stringtools::replaceAll(line, "new", STR(WBOLD_BLUE_COLOR) + "new" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "function", STR(WBOLD_RED_COLOR) + "function" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "for", STR(WBOLD_RED_COLOR) + "for" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "while", STR(WBOLD_RED_COLOR) + "while" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "do", STR(WBOLD_RED_COLOR) + "do" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "break", STR(WBOLD_BLUE_COLOR) + "break" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "return", STR(WBOLD_BLUE_COLOR) + "return" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "continue", STR(WBOLD_BLUE_COLOR) + "continue" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "if", STR(WBOLD_CYAN_COLOR) + "if" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "else", STR(WBOLD_CYAN_COLOR) + "else" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "console", STR(WBOLD_CYAN_COLOR) + "console" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "switch", STR(WBOLD_CYAN_COLOR) + "switch" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "case", STR(WBOLD_CYAN_COLOR) + "case" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "try", STR(WBOLD_RED_COLOR) + "try" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "catch", STR(WBOLD_RED_COLOR) + "catch" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "throw", STR(WBOLD_RED_COLOR) + "throw" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "finally", STR(WBOLD_RED_COLOR) + "finally" + STR(WBLACK_COLOR));
+
+	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+
+	std::cout << line + "\n";
 }
