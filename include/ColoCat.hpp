@@ -7,6 +7,6 @@
 #ifndef COLOCAT_HPP
 #define COLOCAT_HPP
 
-#define VERSION "0.1-beta-2"
+#define VERSION "0.2-beta-1"
 
 #endif // COLOCAT_HPP
