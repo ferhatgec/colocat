@@ -19,16 +19,23 @@ inline std::string STR(const char* str) {
 }
 
 
-void Languages::Regular(std::string line) {
+void Languages::Regular(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "int", STR(WBOLD_RED_COLOR) + "int" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "char",  STR(WBOLD_BLUE_COLOR) + "char" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "const",  STR(WBOLD_LIGHT_BLUE_COLOR) + "const" + STR(WBLACK_COLOR));			
 	stringtools::replaceAll(line, "void",  STR(WBOLD_BLUE_COLOR) + "void" + STR(WBLACK_COLOR));
-
+	
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	std::cout << line + "\n";
 }
 
-void Languages::CPlusPlus(std::string line) {
+void Languages::CPlusPlus(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "int", STR(WBOLD_BLUE_COLOR) + "int" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "long",  STR(WBOLD_BLUE_COLOR) + "long" + STR(WBLACK_COLOR));
 	
@@ -118,11 +125,19 @@ void Languages::CPlusPlus(std::string line) {
 	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+		
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	
 	std::cout << line + "\n";
 }
 
-void Languages::FlaScript(std::string line) {
+void Languages::FlaScript(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "var", STR(WBOLD_BLUE_COLOR) + "var" + STR(WBLACK_COLOR));
 	
 	stringtools::replaceAll(line, "bool", STR(WBOLD_LIGHT_BLUE_COLOR) + "bool" + STR(WBLACK_COLOR));
@@ -175,10 +190,17 @@ void Languages::FlaScript(std::string line) {
 	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
 	
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	std::cout << line + "\n";
 }
 
-void Languages::Python(std::string line) {
+void Languages::Python(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "if",  STR(WBOLD_LIGHT_RED_COLOR) + "if" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "else",  STR(WBOLD_LIGHT_RED_COLOR) + "else" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "elif",  STR(WBOLD_LIGHT_RED_COLOR) + "elif" + STR(WBLACK_COLOR));
@@ -212,10 +234,17 @@ void Languages::Python(std::string line) {
 	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
 	
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	std::cout << line + "\n";
 }
 
-void Languages::HTML(std::string line) {
+void Languages::HTML(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "html", STR(WBOLD_CYAN_COLOR) + "html" + STR(WBLACK_COLOR));
 
 	stringtools::replaceAll(line, "!doctype", STR(WBOLD_BLUE_COLOR) + "!doctype" + STR(WBLACK_COLOR));
@@ -347,10 +376,17 @@ void Languages::HTML(std::string line) {
 	stringtools::replaceAll(line, "<", STR(WBOLD_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, ">", STR(WBOLD_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	std::cout << line + "\n";
 
 }
-void Languages::Javascript(std::string line) {
+void Languages::Javascript(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "var", STR(WBOLD_BLUE_COLOR) + "var" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "const", STR(WBOLD_BLUE_COLOR) + "const" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "let", STR(WBOLD_BLUE_COLOR) + "let" + STR(WBLACK_COLOR));
@@ -386,6 +422,13 @@ void Languages::Javascript(std::string line) {
 	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
-
+	
+	if(line_number == 8 || line_number == 98 || line_number == 998)
+		std::cout << line_number << " ╰   ";
+	else if(line_number == 9 || line_number == 99 || line_number == 999)
+		std::cout << line_number << "  ╮";
+	else
+		std::cout << line_number << _line;
+		
 	std::cout << line + "\n";
 }

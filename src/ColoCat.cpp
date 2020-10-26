@@ -25,30 +25,45 @@ int GetWhitespace(std::string line) {
 
 void ReadFile(std::string file) {
     std::string line;
+    unsigned line_number;
+    
     std::ifstream readfile((fsplusplus::GetCurrentWorkingDir() + "/" + file).c_str());
 
 	Languages lang;
 	
     if(readfile.is_open()) {
-    	if(strstr(file.c_str(), ".cpp") || strstr(file.c_str(), ".hpp"))
-    		while (std::getline(readfile, line))
-				lang.CPlusPlus(line);
-    	else if(strstr(file.c_str(), ".fls") || strstr(file.c_str(), ".flsh"))
-    		while (std::getline(readfile, line))
-				lang.FlaScript(line);
-    	else if(strstr(file.c_str(), ".py") || strstr(file.c_str(), ".pyw"))
-    		while (std::getline(readfile, line))
-				lang.Python(line);
-		else if(strstr(file.c_str(), ".htm") || strstr(file.c_str(), ".html"))
-			while(std::getline(readfile, line))
-				lang.HTML(line);
-		else if(strstr(file.c_str(), ".js"))
-			while(std::getline(readfile, line))
-				lang.Javascript(line);
-    	else
-        	while (std::getline(readfile, line))
-				lang.Regular(line);
-        	 
+    	if(strstr(file.c_str(), ".cpp") || strstr(file.c_str(), ".hpp")) {
+    		while (std::getline(readfile, line)) {
+    			line_number++;
+				lang.CPlusPlus(line, line_number);
+			}
+    	} else if(strstr(file.c_str(), ".fls") || strstr(file.c_str(), ".flsh")) {
+    		while (std::getline(readfile, line)) {
+				line_number++;
+				lang.FlaScript(line, line_number);
+    		}
+    	} else if(strstr(file.c_str(), ".py") || strstr(file.c_str(), ".pyw")) {
+    		while (std::getline(readfile, line)) {
+				line_number++;
+				lang.Python(line, line_number);
+			}
+		} else if(strstr(file.c_str(), ".htm") || strstr(file.c_str(), ".html")) {
+			while(std::getline(readfile, line)) {
+				line_number++;
+				lang.HTML(line, line_number);
+			}
+		} else if(strstr(file.c_str(), ".js")) {
+			while(std::getline(readfile, line)) {
+				line_number++;
+				lang.Javascript(line, line_number);
+			}
+    	} else {
+        	while (std::getline(readfile, line)) {
+        		line_number++;
+				lang.Regular(line, line_number);
+        	}
+        }
+        
         readfile.close();
     } else std::cout << "Unable to open file\n";
     

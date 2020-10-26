@@ -10,15 +10,16 @@
 #include <iostream>
 #include <cstring>
 
+static std::string _line = " │ ";
 
 class Languages {
 public:
-	void Regular(std::string line);
-	void CPlusPlus(std::string line);
-	void FlaScript(std::string line);
-	void Python(std::string line);
-	void HTML(std::string line);
-	void Javascript(std::string line);
+	void Regular(std::string line, unsigned line_number);
+	void CPlusPlus(std::string line, unsigned line_number);
+	void FlaScript(std::string line, unsigned line_number);
+	void Python(std::string line, unsigned line_number);
+	void HTML(std::string line, unsigned line_number);
+	void Javascript(std::string line, unsigned line_number);
 };
 
 #endif // LANGUAGES_HPP
