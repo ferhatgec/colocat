@@ -126,6 +126,7 @@ void Languages::CPlusPlus(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
 		
+
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
 	else if(line_number == 9 || line_number == 99 || line_number == 999)

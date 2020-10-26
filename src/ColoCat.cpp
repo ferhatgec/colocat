@@ -25,7 +25,7 @@ int GetWhitespace(std::string line) {
 
 void ReadFile(std::string file) {
     std::string line;
-    unsigned line_number;
+    unsigned line_number = 0;
     
     std::ifstream readfile((fsplusplus::GetCurrentWorkingDir() + "/" + file).c_str());
 
@@ -86,6 +86,11 @@ void HelpFunction(const char* arg) {
 	std::cout << arg << " [file]\n";  
 }
 
+void centerText(char *text, char* language, int fieldWidth) {
+    int padlen = (fieldWidth - strlen(text)) / 2;
+    printf("🔒 %*s%s │ %*s\n ", padlen, "", text, padlen, language);
+}
+
 int main(int argc, char** argv) { 
 	if(argc < 2) {
     	HelpFunction(argv[0]);	
@@ -93,7 +98,34 @@ int main(int argc, char** argv) {
 	}
     
 	std::string argv_str(argv[1]);
-    
+	
+	// Corners	
+	std::cout << "  ╭";
+	
+	for(int a = 0; a != 10; a++) {
+		std::cout << "───";
+	}
+	
+	// Corners
+	std::cout << "╮\n " << _line;
+	
+	
+	// Language
+	if(argv_str.find(".cpp"))
+		centerText(argv[1], "C++" , 10);
+	else
+		centerText(argv[1], "Generic" , 10);
+	
+	// Corners
+	std::cout << " ╰";
+	
+	for(int a = 0; a != 10; a++) {
+		std::cout << "───";
+	}
+	
+	// Corners
+	std::cout << "╯\n";
+
     ReadFile(argv_str);
 
     return 0;
