@@ -88,7 +88,7 @@ void HelpFunction(const char* arg) {
 
 void centerText(char *text, char* language, int fieldWidth) {
     int padlen = (fieldWidth - strlen(text)) / 2;
-    printf("🔒 %*s%s │ %*s\n ", padlen, "", text, padlen, language);
+    printf("🔒 %*s\033[0;95m%s\033[0m \033[0;94m│\033[0m %*s\n ", padlen, "", text, padlen, language);
 }
 
 int main(int argc, char** argv) { 
@@ -98,6 +98,8 @@ int main(int argc, char** argv) {
 	}
     
 	std::string argv_str(argv[1]);
+	
+	BOLD_YELLOW_COLOR();
 	
 	// Corners	
 	std::cout << "  ╭";
@@ -109,12 +111,15 @@ int main(int argc, char** argv) {
 	// Corners
 	std::cout << "╮\n " << _line;
 	
-	
+	RESETB();
+		
 	// Language
-	if(argv_str.find(".cpp"))
-		centerText(argv[1], "C++" , 10);
-	else
+	if(argv_str.find(".cpp")) {
+		centerText(argv[1], "\033[1;91mC++\033[0m" , 10);
+	} else
 		centerText(argv[1], "Generic" , 10);
+	
+	BOLD_LIGHT_CYAN_COLOR();
 	
 	// Corners
 	std::cout << " ╰";
@@ -126,6 +131,8 @@ int main(int argc, char** argv) {
 	// Corners
 	std::cout << "╯\n";
 
+	RESETB();
+	
     ReadFile(argv_str);
 
     return 0;
