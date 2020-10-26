@@ -114,8 +114,10 @@ int main(int argc, char** argv) {
 	RESETB();
 		
 	// Language
-	if(argv_str.find(".cpp")) {
-		centerText(argv[1], "\033[1;91mC++\033[0m" , 10);
+	if(strstr(argv_str.c_str(), ".cpp") || strstr(argv_str.c_str(), ".hpp")) {
+		centerText(argv[1], "\033[1;91mC++\033[0m", 10);
+	} else if(strstr(argv_str.c_str(), ".fls")) {
+		centerText(argv[1], "\033[01;33mFlaScript\033[0m", 10);
 	} else
 		centerText(argv[1], "Generic" , 10);
 	
