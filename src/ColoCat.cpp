@@ -118,8 +118,14 @@ int main(int argc, char** argv) {
 		centerText(argv[1], "\033[1;91mC++\033[0m", 10);
 	} else if(strstr(argv_str.c_str(), ".fls")) {
 		centerText(argv[1], "\033[01;33mFlaScript\033[0m", 10);
+	} else if(strstr(argv_str.c_str(), ".py")) {
+		centerText(argv[1], "\033[01;32mPython\033[0m", 10);
+	} else if(strstr(argv_str.c_str(), ".js")) {
+		centerText(argv[1], "\033[01;95mJavaScript\033[0m", 10);
+	} else if(strstr(argv_str.c_str(), ".htm")) {
+		centerText(argv[1], "\033[01;96mHTML\033[0m", 10);
 	} else
-		centerText(argv[1], "Generic" , 10);
+		centerText(argv[1], "Regular" , 10);
 	
 	BOLD_LIGHT_CYAN_COLOR();
 	
