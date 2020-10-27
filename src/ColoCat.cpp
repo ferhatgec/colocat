@@ -91,6 +91,39 @@ void centerText(char *text, char* language, int fieldWidth) {
     printf("🔒 %*s\033[0;95m%s\033[0m \033[0;94m│\033[0m %*s\n ", padlen, "", text, padlen, language);
 }
 
+void printHalfBox_Top(int len) {
+	BOLD_YELLOW_COLOR();
+
+	// Corners	
+	std::cout << "  ╭";
+	
+	for(int a = 0; a != len; a++) {
+		std::cout << "───";
+	}
+	
+	// Corners
+	std::cout << "╮\n " << _line;
+	
+	RESETB();		
+}
+
+void printHalfBox_Bottom(int len) {
+	BOLD_LIGHT_CYAN_COLOR();
+	
+	// Corners
+	std::cout << " ╰";
+	
+	for(int a = 0; a != len; a++) {
+		std::cout << "───";
+	}
+	
+	// Corners
+	std::cout << "╯\n";
+
+	RESETB();	
+}
+
+
 int main(int argc, char** argv) { 
 	if(argc < 2) {
     	HelpFunction(argv[0]);	
@@ -99,19 +132,8 @@ int main(int argc, char** argv) {
     
 	std::string argv_str(argv[1]);
 	
-	BOLD_YELLOW_COLOR();
-	
-	// Corners	
-	std::cout << "  ╭";
-	
-	for(int a = 0; a != 10; a++) {
-		std::cout << "───";
-	}
-	
-	// Corners
-	std::cout << "╮\n " << _line;
-	
-	RESETB();
+	// Set default width size.
+	printHalfBox_Top(10);
 		
 	// Language
 	if(strstr(argv_str.c_str(), ".cpp") || strstr(argv_str.c_str(), ".hpp")) {
@@ -127,19 +149,8 @@ int main(int argc, char** argv) {
 	} else
 		centerText(argv[1], "Regular" , 10);
 	
-	BOLD_LIGHT_CYAN_COLOR();
-	
-	// Corners
-	std::cout << " ╰";
-	
-	for(int a = 0; a != 10; a++) {
-		std::cout << "───";
-	}
-	
-	// Corners
-	std::cout << "╯\n";
-
-	RESETB();
+	// Set default width size.
+	printHalfBox_Bottom(15);	
 	
     ReadFile(argv_str);
 
