@@ -150,7 +150,7 @@ int main(int argc, char** argv) {
 		centerText(argv[1], "Regular" , 10);
 	
 	// Set default width size.
-	printHalfBox_Bottom(15);	
+	printHalfBox_Bottom(10);	
 	
     ReadFile(argv_str);
 
