@@ -14,6 +14,8 @@ static std::string _line = " │ ";
 
 class Languages {
 public:
+	std::string Predefined(std::string line);
+	
 	void Regular(std::string line, unsigned line_number);
 	void CPlusPlus(std::string line, unsigned line_number);
 	void FlaScript(std::string line, unsigned line_number);

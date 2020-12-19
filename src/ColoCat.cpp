@@ -86,9 +86,8 @@ void HelpFunction(const char* arg) {
 	std::cout << arg << " [file]\n";  
 }
 
-void centerText(char *text, char* language, int fieldWidth) {
-    int padlen = (fieldWidth - strlen(text)) / 2;
-    printf("🔒 %*s\033[0;95m%s\033[0m \033[0;94m│\033[0m %*s\n ", padlen, "", text, padlen, language);
+void centerText(std::string text, std::string language) {
+    std::cout << "🔒 \033[0;95m" << text << "\033[0m \033[0;94m│\033[0m " << language << "\n ";
 }
 
 void printHalfBox_Top(int len) {
@@ -137,17 +136,17 @@ int main(int argc, char** argv) {
 		
 	// Language
 	if(strstr(argv_str.c_str(), ".cpp") || strstr(argv_str.c_str(), ".hpp")) {
-		centerText(argv[1], "\033[1;91mC++\033[0m", 10);
+		centerText(argv_str, "\033[1;91mC++\033[0m");
 	} else if(strstr(argv_str.c_str(), ".fls")) {
-		centerText(argv[1], "\033[01;33mFlaScript\033[0m", 10);
+		centerText(argv_str, "\033[01;33mFlaScript\033[0m");
 	} else if(strstr(argv_str.c_str(), ".py")) {
-		centerText(argv[1], "\033[01;32mPython\033[0m", 10);
+		centerText(argv_str, "\033[01;32mPython\033[0m");
 	} else if(strstr(argv_str.c_str(), ".js")) {
-		centerText(argv[1], "\033[01;95mJavaScript\033[0m", 10);
+		centerText(argv_str, "\033[01;95mJavaScript\033[0m");
 	} else if(strstr(argv_str.c_str(), ".htm")) {
-		centerText(argv[1], "\033[01;96mHTML\033[0m", 10);
+		centerText(argv_str, "\033[01;96mHTML\033[0m");
 	} else
-		centerText(argv[1], "Regular" , 10);
+		centerText(argv_str, "Regular");
 	
 	// Set default width size.
 	printHalfBox_Bottom(10);	

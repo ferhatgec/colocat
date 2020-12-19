@@ -18,12 +18,27 @@ inline std::string STR(const char* str) {
 	return (std::string)str;
 }
 
+std::string Languages::Predefined(std::string line) {
+    stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
+	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+
+    return line;
+}
 
 void Languages::Regular(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "int", STR(WBOLD_RED_COLOR) + "int" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "char",  STR(WBOLD_BLUE_COLOR) + "char" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "const",  STR(WBOLD_LIGHT_BLUE_COLOR) + "const" + STR(WBLACK_COLOR));			
 	stringtools::replaceAll(line, "void",  STR(WBOLD_BLUE_COLOR) + "void" + STR(WBLACK_COLOR));
+	
+	line = Predefined(line);
 	
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
@@ -116,16 +131,7 @@ void Languages::CPlusPlus(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "getline",  STR(WBOLD_CYAN_COLOR) + "getline" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "cin",  STR(WBOLD_CYAN_COLOR) + "cin" + STR(WBLACK_COLOR));
 	
-	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
-		
+    line = Predefined(line);
 
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
@@ -181,15 +187,7 @@ void Languages::FlaScript(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "@echo",  STR(WBOLD_CYAN_COLOR) + "@echo" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "fprintln",  STR(WBOLD_CYAN_COLOR) + "fprintln" + STR(WBLACK_COLOR));
 	
-	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+	line = Predefined(line);
 	
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
@@ -225,15 +223,7 @@ void Languages::Python(std::string line, unsigned line_number) {
 		
 	stringtools::replaceAll(line, "print",  STR(WBOLD_CYAN_COLOR) + "print" + STR(WBLACK_COLOR));
 	
-	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+	line = Predefined(line);
 	
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
@@ -414,15 +404,7 @@ void Languages::Javascript(std::string line, unsigned line_number) {
 	stringtools::replaceAll(line, "throw", STR(WBOLD_RED_COLOR) + "throw" + STR(WBLACK_COLOR));
 	stringtools::replaceAll(line, "finally", STR(WBOLD_RED_COLOR) + "finally" + STR(WBLACK_COLOR));
 
-	stringtools::replaceAll(line, "::",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "::" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "{",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "{" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "}",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "}" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "(",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "(" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ")",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ")" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "*",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "*" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "<",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "<" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, ">",  STR(WBOLD_LIGHT_YELLOW_COLOR) + ">" + STR(WBLACK_COLOR));
-	stringtools::replaceAll(line, "+",  STR(WBOLD_LIGHT_YELLOW_COLOR) + "+" + STR(WBLACK_COLOR));
+	line = Predefined(line);
 	
 	if(line_number == 8 || line_number == 98 || line_number == 998)
 		std::cout << line_number << " ╰   ";
