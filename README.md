@@ -19,6 +19,7 @@
  * [For Python as PytoCat](https://github.com/ferhatgec/pytocat)
  * [For Ruby as RubyCat](https://github.com/ferhatgec/rubycat)
  * [For D as DoloCat](https://github.com/ferhatgec/dolocat)
+ * [For Nim as NimoCat](https://github.com/ferhatgec/nimocat)
  * [For FlaScript as Kitty](https://github.com/ferhatgec/kit)
 
 ### Fegeya Colocat licensed under the terms of MIT License.
