@@ -202,6 +202,10 @@ namespace stringtools {
 
   		return (*unsigned_str_1 > *unsigned_str_2) - (*unsigned_str_1 < *unsigned_str_2);
 	}
+
+    static inline std::string ltrim(std::string s) {
+        return s.erase(0, s.find_first_not_of(" \t\n\r\f\v"));
+    }
 }
 
 #endif // STRING_TOOLS_HPP
